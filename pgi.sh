@@ -7,15 +7,15 @@ TEMPORARY_FILES="/tmp"
 
 export PGI_SILENT=true
 export PGI_ACCEPT_EULA=accept
-export PGI_INSTALL_DIR="${HOME}/pgi"
+export PGI_INSTALL_DIR="/opt/pgi"
 export PGI_INSTALL_NVIDIA=false
 export PGI_INSTALL_AMD=false
 export PGI_INSTALL_JAVA=true
-export PGI_INSTALL_MPI=false
+export PGI_INSTALL_MPI=true
 export PGI_MPI_GPU_SUPPORT=false
 export PGI_INSTALL_MANAGED=true
 
-VERBOSE=false
+VERBOSE=true
 
 while [ $# != 0 ]; do
     case "$1" in
