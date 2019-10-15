@@ -1,0 +1,24 @@
+export DEBIAN_FRONTEND=noninteractive
+export PATH=/opt/pgi/linux86-64/19.4/bin:/opt/pgi/linux86-64/19.4/mpi/openmpi-3.1.3/bin:$PATH
+export CC=pgcc
+export CXX=pgc++
+export FC=pgf90
+export F77=pgfortran
+export JASPERLIB=/usr/local/lib
+export JASPERINC=/usr/local/include
+export NETCDF=NETCDF
+export HDF5=/usr/local
+cat env >> ~/.bashrc
+sh /root/update.sh 
+sh /root/pgi.sh  
+sh /root/dep-prep.sh 
+sh /root/dep-iconv.sh
+sh /root/dep-zlib.sh 
+sh /root/dep-libpng.sh 
+sh /root/dep-jasper.sh 
+sh /root/dep-hdf5.sh 
+sh /root/dep-netcdf.sh
+sh /root/wrf-prep.sh 
+sh /root/wrf-build-1.sh 
+sh /root/wrf-build-2.sh 
+sh /root/clean.sh

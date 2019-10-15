@@ -5,8 +5,5 @@ services:
 
 script:
   - docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER .
-  - mv Dockerfile.d Dockerfile
-  - docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER_geog .
   - docker login -u $docker_user -p $docker_token
   - docker push mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER
-  - docker push mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER_geog

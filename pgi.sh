@@ -74,7 +74,7 @@ cd "${TEMPORARY_FILES}"/install_components && ./install
 
 PGI_VERSION=$(basename "${PGI_INSTALL_DIR}"/linux86-64/*.*/)
 
-INSTALL_BINDIR="${HOME}/bin"
+INSTALL_BINDIR="/usr/local/bin"
 if [ ! -e "${INSTALL_BINDIR}" ]; then
     mkdir -p "${INSTALL_BINDIR}"
 fi

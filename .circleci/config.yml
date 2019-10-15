@@ -8,11 +8,11 @@ commands:
           name: Build Latest Docker Image
           command: |
             docker build -t mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM .
-            mv Dockerfile.d Dockerfile
-            docker build -t mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM_geog .
+            # mv Dockerfile.d Dockerfile
+            # docker build -t mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM_geog .
             docker login -u $docker_user -p $docker_token
             docker push mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM
-            docker push mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM_geog
+            # docker push mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM_geog
 
 
 jobs:

@@ -14,10 +14,10 @@ ENV HDF5 /usr
 RUN sh /root/update.sh &&\
     sh /root/pgi.sh  &&\
     sh /root/dep-prep.sh &&\
-#   sh /root/dep-curl.sh &&\
+    sh /root/dep-curl.sh &&\
 #   sh /root/dep-zlib.sh &&\
 #   sh /root/dep-libpng.sh &&\
-   sh /root/dep-jasper.sh &&\
+#   sh /root/dep-jasper.sh &&\
 #   sh /root/dep-hdf5.sh  &&\ 
 #   sh /root/dep-netcdf.sh &&\
     sh /root/wrf-prep.sh &&\

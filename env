@@ -1,0 +1,10 @@
+export DEBIAN_FRONTEND=noninteractive
+export PATH=/opt/pgi/linux86-64/19.4/bin:/opt/pgi/linux86-64/19.4/mpi/openmpi-3.1.3/bin:$PATH
+export CC=pgcc
+export CXX=pgc++
+export FC=pgf90
+export F77=pgfortran
+export JASPERLIB=/usr/local/lib
+export JASPERINC=/usr/local/include
+export NETCDF=NETCDF
+export HDF5=/usr/local
