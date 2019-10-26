@@ -4,6 +4,6 @@ services:
   - docker
 
 script:
-  - docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER .
+  - travis_wait 60 docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER .
   - docker login -u $docker_user -p $docker_token
   - docker push mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER
