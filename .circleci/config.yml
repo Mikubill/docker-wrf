@@ -13,6 +13,7 @@ commands:
             docker login -u $docker_user -p $docker_token
             docker push mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM
             # docker push mikubill/docker-wrf:circle_build_$CIRCLE_BUILD_NUM_geog
+          no_output_timeout: 1.5h
 
 
 jobs:
