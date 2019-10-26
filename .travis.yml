@@ -5,7 +5,7 @@ services:
 
 script:
   - while sleep 8m; do echo "=====[ $SECONDS seconds still running ]====="; done &
-  - travis_wait 60 docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER .
+  - docker build -t mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER .
   - docker login -u $docker_user -p $docker_token
   - docker push mikubill/docker-wrf:travis_build_$TRAVIS_BUILD_NUMBER
   - kill %1
